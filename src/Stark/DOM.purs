@@ -1,7 +1,8 @@
 module Stark.DOM where
 
-import Stark.Types (StarkElement(..), TagName)
+import Data.Monoid (mempty)
 import Stark.DOM.Props (Props)
+import Stark.Types (StarkElement(..), TagName)
 
 newtype IsDynamic = IsDynamic Boolean
 
@@ -37,7 +38,7 @@ address' :: StarkElement -> StarkElement
 address' = address []
 
 area :: Array Props -> StarkElement
-area props = mkDOM (IsDynamic false) "area" props (StarkArray [])
+area props = mkDOM (IsDynamic false) "area" props mempty
 
 area' :: StarkElement
 area' = area []
@@ -67,7 +68,7 @@ b' :: StarkElement -> StarkElement
 b' = b []
 
 base :: Array Props -> StarkElement
-base props = mkDOM (IsDynamic false) "base" props (StarkArray [])
+base props = mkDOM (IsDynamic false) "base" props mempty
 
 base' :: StarkElement
 base' = base []
@@ -103,7 +104,7 @@ body' :: StarkElement -> StarkElement
 body' = body []
 
 br :: Array Props -> StarkElement
-br props = mkDOM (IsDynamic false) "br" props (StarkArray [])
+br props = mkDOM (IsDynamic false) "br" props mempty
 
 br' :: StarkElement
 br' = br []
@@ -139,7 +140,7 @@ code' :: StarkElement -> StarkElement
 code' = code []
 
 col :: Array Props -> StarkElement
-col props = mkDOM (IsDynamic false) "col" props (StarkArray [])
+col props = mkDOM (IsDynamic false) "col" props mempty
 
 col' :: StarkElement
 col' = col []
@@ -217,7 +218,7 @@ em' :: StarkElement -> StarkElement
 em' = em []
 
 embed :: Array Props -> StarkElement
-embed props = mkDOM (IsDynamic false) "embed" props (StarkArray [])
+embed props = mkDOM (IsDynamic false) "embed" props mempty
 
 embed' :: StarkElement
 embed' = embed []
@@ -301,7 +302,7 @@ header' :: StarkElement -> StarkElement
 header' = header []
 
 hr :: Array Props -> StarkElement
-hr props = mkDOM (IsDynamic false) "hr" props (StarkArray [])
+hr props = mkDOM (IsDynamic false) "hr" props mempty
 
 hr' :: StarkElement
 hr' = hr []
@@ -325,13 +326,13 @@ iframe' :: StarkElement -> StarkElement
 iframe' = iframe []
 
 img :: Array Props -> StarkElement
-img props = mkDOM (IsDynamic false) "img" props (StarkArray [])
+img props = mkDOM (IsDynamic false) "img" props mempty
 
 img' :: StarkElement
 img' = img []
 
 input :: Array Props -> StarkElement
-input props = mkDOM (IsDynamic false) "input" props (StarkArray [])
+input props = mkDOM (IsDynamic false) "input" props mempty
 
 input' :: StarkElement
 input' = input []
@@ -349,7 +350,7 @@ kbd' :: StarkElement -> StarkElement
 kbd' = kbd []
 
 keygen :: Array Props -> StarkElement
-keygen props = mkDOM (IsDynamic false) "keygen" props (StarkArray [])
+keygen props = mkDOM (IsDynamic false) "keygen" props mempty
 
 keygen' :: StarkElement
 keygen' = keygen []
@@ -373,7 +374,7 @@ li' :: StarkElement -> StarkElement
 li' = li []
 
 link :: Array Props -> StarkElement
-link props = mkDOM (IsDynamic false) "link" props (StarkArray [])
+link props = mkDOM (IsDynamic false) "link" props mempty
 
 link' :: StarkElement
 link' = link []
@@ -403,13 +404,13 @@ menu' :: StarkElement -> StarkElement
 menu' = menu []
 
 menuitem :: Array Props -> StarkElement
-menuitem props = mkDOM (IsDynamic false) "menuitem" props (StarkArray [])
+menuitem props = mkDOM (IsDynamic false) "menuitem" props mempty
 
 menuitem' :: StarkElement
 menuitem' = menuitem []
 
 meta :: Array Props -> StarkElement
-meta props = mkDOM (IsDynamic false) "meta" props (StarkArray [])
+meta props = mkDOM (IsDynamic false) "meta" props mempty
 
 meta' :: StarkElement
 meta' = meta []
@@ -469,7 +470,7 @@ p' :: StarkElement -> StarkElement
 p' = p []
 
 param :: Array Props -> StarkElement
-param props = mkDOM (IsDynamic false) "param" props (StarkArray [])
+param props = mkDOM (IsDynamic false) "param" props mempty
 
 param' :: StarkElement
 param' = param []
@@ -553,7 +554,7 @@ small' :: StarkElement -> StarkElement
 small' = small []
 
 source :: Array Props -> StarkElement
-source props = mkDOM (IsDynamic false) "source" props (StarkArray [])
+source props = mkDOM (IsDynamic false) "source" props mempty
 
 source' :: StarkElement
 source' = source []
@@ -655,7 +656,7 @@ tr' :: StarkElement -> StarkElement
 tr' = tr []
 
 track :: Array Props -> StarkElement
-track props = mkDOM (IsDynamic false) "track" props (StarkArray [])
+track props = mkDOM (IsDynamic false) "track" props mempty
 
 track' :: StarkElement
 track' = track []
@@ -685,7 +686,7 @@ video' :: StarkElement -> StarkElement
 video' = video []
 
 wbr :: Array Props -> StarkElement
-wbr props = mkDOM (IsDynamic false) "wbr" props (StarkArray [])
+wbr props = mkDOM (IsDynamic false) "wbr" props mempty
 
 wbr' :: StarkElement
 wbr' = wbr []

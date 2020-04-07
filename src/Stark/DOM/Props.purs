@@ -22,6 +22,9 @@ import Stark.SyntheticEvent
 
 data Props = Props String
 
+derive instance eqProps :: Eq Props
+derive instance ordProps :: Ord Props
+
 instance showProp :: Show Props where
   show :: Props -> String
   show (Props n) = "[" <> n <> "]"
